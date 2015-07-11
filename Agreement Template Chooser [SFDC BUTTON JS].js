@@ -1,7 +1,8 @@
     //  ======================================================================
-    //  NAME : EchoSign for Salesforce Big Button
-  	//  AUTHOR : Chris Merrill (cmerrill@adobe.com)
-  	//  UPDATES : Latest version available at http://j.mp/1vPHwS8
+    //  NAME : EchoSign for Salesforce Agreement Template Chooser
+  	//  AUTHOR : Chris Merrill (cmerrill.adobe@gmail.com)
+  	//  UPDATES : Latest version available on github
+    //  https://github.com/cmerrill-adobe/sfdc-es-agreement-template-js-chooser
     //  ======================================================================
     //  This button will query for all agreement templates and
     //  present a list for the user to choose an agreement template from.
@@ -10,11 +11,14 @@
     //  ======================================================================
     
   	// Id of MasterObjectType. Taken from URL
+    // If a custom VF page is used, then this will need to be adjusted.
+    // MasterObjectId needs to be the record ID
   		var MasterObjectId 	= document.URL.split("/")[3].split("?")[0];
 
   	// Try to determine ObjectType by Id Prefix
   	// Master Object to be used with the agreement template
   	// Prefix to standard object mapping definitions: http://j.mp/1BY2cYY
+    
 	  	var MasterObjectType; 
 	  	switch ( MasterObjectId.substring(0, 3) ) {
 		  	case '001':	MasterObjectType = 'Account'; break;
@@ -24,9 +28,9 @@
 		  	case '800': MasterObjectType = 'Contract'; break;
 		  	case '500': MasterObjectType = 'Case'; break;
 		  	case '00Q': MasterObjectType = 'Lead'; break;
-	     
+
 	    	// If you are using a custom object, or one not listed above, 
-	    	// Change the default below  
+        // Change the default below  
 	  		default: 	MasterObjectType = "Opportunity";
 	  	}	//</switch
   
