@@ -21,8 +21,8 @@
     
 	var MasterObjectType; 
 	switch ( MasterObjectId.substring(0, 3) ) {
-		case '001':	MasterObjectType = 'Account'; break;
-		case '003':	MasterObjectType = 'Contact'; break;
+		case '001':MasterObjectType = 'Account'; break;
+		case '003':MasterObjectType = 'Contact'; break;
 		case '005': MasterObjectType = 'User'; break;
 		case '006': MasterObjectType = 'Opportunity'; break;
 		case '800': MasterObjectType = 'Contract'; break;
