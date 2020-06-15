@@ -1,4 +1,4 @@
-# sfdc-es-agreement-template-js-chooser
+# AdobeSignSalesforceClassicJavascriptButton
 
 This button simplifies the buttons for EchoSign for Salesforce.com.
 
