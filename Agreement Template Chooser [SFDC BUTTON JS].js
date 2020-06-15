@@ -30,7 +30,7 @@
 		case '00Q': MasterObjectType = 'Lead'; break;
 	// If you are using a custom object, or one not listed above, 
         // Change the default below  
-		default: 	MasterObjectType = "Opportunity";
+		default: MasterObjectType = "Opportunity";
 	}	//</switch
   
   	// Salesforce.com Javascript libraries
